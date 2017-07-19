@@ -1,0 +1,19 @@
+<div class="welcome-container">
+    <h1>Welcome to the vending Machine <img src="assets/images/angular.png"></h1>
+</div>
+
+<div class="machine-container">
+    <products [updatedProducts]="products"></products>
+
+    <transactions
+        (notify)="onProductSold($event)"
+        (notifyUpdateProducts)="onProductsUpdated($event)"
+    ></transactions>
+
+    <vendor
+        (notifyUpdatingSlot)="onVendorProductsUpdated($event)"
+        [updatedProducts]="products">
+    </vendor>
+
+    <receiving-box [sold]="productSold"></receiving-box>
+</div>

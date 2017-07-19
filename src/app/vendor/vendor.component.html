@@ -1,0 +1,21 @@
+<div class="vendor">
+    <p>Vendor Section</p>
+    <img src="assets/images/lock.png" alt="Vendor section" (click)="show = !show">
+
+    <div *ngIf="show">
+        <select (change)="onChange($event.target.value)">
+            <option>Select a Product</option>
+            <ng-container *ngFor="let row of products">
+                <ng-container *ngFor="let product of row.products; let i = index">
+                    <option *ngIf="(product.quantity < 10)" value="{{ row.id }}{{ i }}">
+                        {{ row.id }}{{ i + 1 }} {{ product.name }} - {{ product.quantity }}
+                    </option>
+                </ng-container>
+            </ng-container>
+        </select>
+
+        <button type="button" (click)="fillProducts()">Fill</button>
+        {{updated}}
+    </div>
+
+</div>

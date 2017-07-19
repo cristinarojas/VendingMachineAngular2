@@ -1,0 +1,34 @@
+@import '../assets/app.colors.scss';
+
+.welcome-container {
+    width: 900px;
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+        color: $white;
+
+        img {
+            width: 50px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.machine-container {
+    background: $blue-base;
+    background: -moz-linear-gradient(top, rgba(87,165,237,1) 0%, rgba(8,70,133,1) 100%);
+    background: -ms-linear-gradient(top, rgba(87,165,237,1) 0%, rgba(8,70,133,1) 100%);
+    background: -o-linear-gradient(top, rgba(87,165,237,1) 0%, rgba(8,70,133,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(87,165,237,1)), color-stop(100%, rgba(8,70,133,1)));
+    background: -webkit-linear-gradient(top, rgba(87,165,237,1) 0%, rgba(8,70,133,1) 100%);
+    background: linear-gradient(to bottom, rgba(87,165,237,1) 0%, rgba(8,70,133,1) 100%);
+    border: 1px solid $black;
+    display: block;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57a5ed', endColorstr='#084685', GradientType=0 );
+    height: 700px;
+    margin: 0 auto;
+    width: 700px;
+    margin-top: 20px;
+}
+

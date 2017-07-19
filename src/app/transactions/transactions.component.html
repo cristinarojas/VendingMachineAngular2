@@ -1,0 +1,49 @@
+<div class="transactions">
+    <div class="pay">
+        <div class="step-one">1</div>
+        <div class="small-screen">
+            <p class="selection">{{latestSelectedProductCode}}</p>
+            <p class="amount" *ngIf="amount > 0 && pending == 0 && !quantity">Inserted: $ {{amount}}</p>
+            <p class="amount" *ngIf="pending > 0 && !quantity">Add: $ {{pending | number: '1.2-5'}}</p>
+            <p class="amount" *ngIf="showPrice > 0 && amount == 0 && !quantity">Price: $ {{showPrice | number: '1.2-5'}}</p>
+            <p class="amount" *ngIf="quantity">{{quantity}}</p>
+        </div>
+        <button type="button" class="money" (click)="addMoney()">$1</button>
+        <div class="coins"></div>
+    </div>
+
+    <div class="keyboard">
+        <div class="step-two">2</div>
+        <table>
+            <tr>
+                <th><button type="button" (click)="selectProduct($event.target.value)" value="A">A</button></th>
+                <th><button type="button" (click)="selectProduct($event.target.value)" value="1">1</button></th>
+                <th><button type="button" (click)="selectProduct($event.target.value)" value="2">2</button></th>
+                <th><button type="button" (click)="selectProduct($event.target.value)" value="3">3</button></th>
+            </tr>
+            <tr>
+                <th><button type="button" (click)="selectProduct($event.target.value)" value="B">B</button></th>
+                <th><button type="button" (click)="selectProduct($event.target.value)" value="4">4</button></th>
+                <th><button type="button" (click)="selectProduct($event.target.value)" value="5">5</button></th>
+                <th><button type="button" disabled="disabled" value="6">6</button></th>
+            </tr>
+            <tr>
+                <th><button type="button" (click)="selectProduct($event.target.value)" value="C">C</button></th>
+                <th><button type="button" disabled="disabled" value="7">7</button></th>
+                <th><button type="button" disabled="disabled" value="8">8</button></th>
+                <th><button type="button" disabled="disabled" value="9">9</button></th>
+            </tr>
+            <tr>
+                <th><button type="button" (click)="selectProduct($event.target.value)" value="D">D</button></th>
+                <th><button type="button" disabled="disabled" value="0">0</button></th>
+                <th><button type="button" disabled="disabled">&nbsp;&nbsp;</button></th>
+                <th><button type="button" disabled="disabled">&nbsp;&nbsp;</button></th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="money-back">
+        <div class="step-three">3</div>
+        <div class="change">$ {{change | number: '1.2-5'}}</div>
+    </div>
+</div>

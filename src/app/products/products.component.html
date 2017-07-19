@@ -1,0 +1,13 @@
+<div class="products-machine">
+  <div class="all-products">
+      <ul *ngFor="let row of products">
+        <li *ngFor="let product of row.products; let i = index" class="slot">
+          <img *ngIf="product.quantity > 0" src="assets/images/{{ product.name }}.png" alt="{{ product.name }}">
+          <img *ngIf="product.quantity == 0" src="assets/images/{{ product.name }}_soldout.png" alt="{{ product.name }}">
+          <span class="slot-quantity">{{ product.quantity }}</span>
+          <span class="position">{{ row.id }}{{ i + 1 }}</span>
+          <span class="price">${{ product.price | number: '1.2-5' }}</span>
+        </li>
+      </ul>
+  </div>
+</div>

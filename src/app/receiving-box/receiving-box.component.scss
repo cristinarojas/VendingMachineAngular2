@@ -1,0 +1,17 @@
+@import '../../assets/app.colors.scss';
+
+.receiving-box {
+    background-color: $black;
+    border-bottom: 2px solid $light-cream;
+    height: 100px;
+    width: 65%;
+    margin-left: 5%;
+    float: left;
+
+    img {
+        margin: 0 auto;
+        display: block;
+        width: 40px;
+        padding-top: 20px;
+    }
+}

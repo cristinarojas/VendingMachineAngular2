@@ -1,0 +1,145 @@
+@import '../../assets/app.colors.scss';
+
+.transactions {
+    //border: 1px solid yellow;
+    height: 350px;
+    width: 150px;
+    display: inline-block;
+    float: left;
+    margin-top: 100px;
+
+    .pay {
+        width: 130px;
+        height: 100px;
+        margin: 0 auto;
+        //border: 1px solid red;
+        position: relative;
+
+        .step-one {
+            display: inline-block;
+            margin: 5px;
+            border-radius: 20px;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            background-color: $light-blue;
+            float: left;
+        }
+
+        .small-screen {
+            width: 95px;
+            height: 55px;
+            border: 2px solid $light-black;
+            text-align: center;
+            background-color: $green-gradient;
+            float: left;
+
+            p {
+                margin: 0px;
+
+                &.selection {
+                    margin-top: 5px;
+                }
+
+                &.amount {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        button {
+            float: left;
+            margin-left: 40px;
+            margin-top: 10px;
+            background: $white;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            color: $black;
+            font-size: 13px;
+            padding: 5px 10px 5px 10px;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+
+        .coins {
+            height: 30px;
+            width: 5px;
+            float: left;
+            margin: 5px;
+            background-color: $black;
+        }
+    }
+
+    .keyboard {
+        width: 130px;
+        height: 145px;
+        margin: 0 auto;
+        //border: 1px solid red;
+
+        .step-two {
+            display: inline-block;
+            margin: 5px;
+            border-radius: 20px;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            background-color: $light-blue;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+        table {
+            float: left;
+
+            tr {
+                th {
+                    text-align: left;
+                    padding: 3px;
+
+                    button {
+                        background-color: $white;
+                        border: none;
+                        font-weight: bold;
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #f1c11e;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .money-back {
+        width: 130px;
+        height: 80px;
+        margin: 0 auto;
+        margin-top: 20px;
+
+        .step-three {
+            display: block;
+            margin: 5px;
+            border-radius: 20px;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            background-color: $light-blue;
+        }
+
+        .change {
+            height: 30px;
+            width: 55px;
+            background-color: black;
+            margin: 0 auto;
+            border-bottom: 2px solid $light-cream;
+            color: $white;
+            padding-top: 10px;
+            text-align: center;
+        }
+    }
+}
